@@ -1,4 +1,5 @@
 const UserModel = require("../models/user.model");
+const LinkModel = require("../models/link.model");
 const dbConfig = require("../config/db.config");
 
 const Sequelize = require("sequelize");
@@ -24,5 +25,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.user = UserModel(sequelize, Sequelize);
+db.link = LinkModel(sequelize, Sequelize);
 
 module.exports = db;
